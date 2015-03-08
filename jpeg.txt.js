@@ -6,13 +6,13 @@ function replace_with_prob(txt, searchval, replaceval, prob)
 {
 	index = 0;
 	index = txt.indexOf(searchval);
-	while (index < txt.length && index > 0)
+    while (index < txt.length && index >= 0)
 	{
-		if (Math.random() < (prob + (quality/100.0 - 0.5)) )
-			txt = txt.substr(0, index) + replaceval + txt.substr(index + searchval.length);
+        if (Math.random() < (prob + (quality/100.0 - 0.5)) )
+            txt = txt.substr(0, index) + replaceval + txt.substr(index + searchval.length);
 		index = txt.indexOf(searchval, index + 1);
 	}
-	return txt;
+    return txt;
 }
 
 function get_rid_of_repeats(txt, prob)
@@ -31,11 +31,8 @@ function get_rid_of_repeats(txt, prob)
 function do_make_jpeg_plz(txt)
 {
     txt = txt.toLowerCase();
-	txt = txt.split(" ");
-	txt = txt.join(" ");
-	txt = get_rid_of_repeats(txt, 0.8);
-	
-    txt = replace_with_prob(txt, "ing ", "in' ", 0.7);
+    txt = txt.split(" ");
+    txt = txt.join(" ");
 
     txt = replace_with_prob(txt, "one", "1", 0.9);
     txt = replace_with_prob(txt, "two", "2", 0.9);
@@ -55,32 +52,34 @@ function do_make_jpeg_plz(txt)
     txt = replace_with_prob(txt, "subtract", "-", 0.5);
     txt = replace_with_prob(txt, "minus", "-", 0.5);
 
+    txt = get_rid_of_repeats(txt, 0.8);
+
+    txt = replace_with_prob(txt, "ing ", "in' ", 0.7);
 	txt = replace_with_prob(txt, "er", "r", 0.3);
-	txt = replace_with_prob(txt, "er", "a", 0.3);
-	txt = replace_with_prob(txt, "ed ", "'d ", 0.3);
+    txt = replace_with_prob(txt, "er", "a", 0.3);
+    txt = replace_with_prob(txt, "ed ", "'d ", 0.3);
     txt = replace_with_prob(txt, "pro", "bro", 0.4);
     txt = replace_with_prob(txt, "with", "w", 0.8);
     txt = replace_with_prob(txt, "and", "&", 0.8);
 
-	txt = replace_with_prob(txt, " ", " ;) ", 0.05);
-	txt = replace_with_prob(txt, "!", "!?", 0.8);
-	txt = replace_with_prob(txt, "?", "!?", 0.8);
+    txt = replace_with_prob(txt, " ", " ;) ", 0.05);
+    txt = replace_with_prob(txt, "!", "!?", 0.8);
+    txt = replace_with_prob(txt, "?", "!?", 0.8);
 
-	txt = replace_with_prob(txt, "ate", "8", 0.8);
+    txt = replace_with_prob(txt, "ate", "8", 0.8);
     txt = replace_with_prob(txt, "i", "1", 0.5);
-	txt = replace_with_prob(txt, "e", "3", 0.2);
-	txt = replace_with_prob(txt, "a", "4", 0.05);
+    txt = replace_with_prob(txt, "e", "3", 0.2);
+    txt = replace_with_prob(txt, "a", "4", 0.05);
     txt = replace_with_prob(txt, "o", "0", 0.2);
 
     txt = replace_with_prob(txt, " ", "", 0.1);
     txt = replace_with_prob(txt, " ", "-", 0.05);
     txt = replace_with_prob(txt, "'", "", 1.0);
     
-	
-	return txt;
+    return txt;
 }
 
-if (process.argv.length > 2)
+if (process && process.argv.length > 2)
 	txt = process.argv[2];
 	jpeg_txt = do_make_jpeg_plz(txt);
 	console.log(jpeg_txt);

@@ -51,6 +51,10 @@ function do_make_jpeg_plz(txt)
     txt = replace_with_prob(txt, "second", "2nd", 0.9);
     txt = replace_with_prob(txt, "third", "3rd", 0.9);
 
+    txt = replace_with_prob(txt, "add", "+", 0.5);
+    txt = replace_with_prob(txt, "subtract", "-", 0.5);
+    txt = replace_with_prob(txt, "minus", "-", 0.5);
+
 	txt = replace_with_prob(txt, "er", "r", 0.3);
 	txt = replace_with_prob(txt, "er", "a", 0.3);
 	txt = replace_with_prob(txt, "ed ", "'d ", 0.3);

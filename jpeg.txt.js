@@ -69,6 +69,12 @@ function do_make_jpeg_plz(txt)
     txt = replace_with_prob(txt, "!", "!?", 0.8);
     txt = replace_with_prob(txt, "?", "!?", 0.8);
 
+    txt = replace_with_prob(txt, "a", "", 0.1);
+    txt = replace_with_prob(txt, "e", "", 0.1);
+    txt = replace_with_prob(txt, "i", "", 0.1);
+    txt = replace_with_prob(txt, "o", "", 0.1);
+    txt = replace_with_prob(txt, "u", "", 0.1);
+
     txt = replace_with_prob(txt, "ate", "8", 0.8);
     txt = replace_with_prob(txt, "i", "1", 0.5);
     txt = replace_with_prob(txt, "e", "3", 0.2);

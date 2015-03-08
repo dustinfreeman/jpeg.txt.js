@@ -52,6 +52,9 @@ function do_make_jpeg_plz(txt)
     txt = replace_with_prob(txt, "subtract", "-", 0.5);
     txt = replace_with_prob(txt, "minus", "-", 0.5);
 
+    txt = replace_with_prob(txt, "canad", "beav", 0.8);
+    txt = replace_with_prob(txt, "says", "sez", 0.7);
+
     txt = get_rid_of_repeats(txt, 0.8);
 
     txt = replace_with_prob(txt, "ing ", "in' ", 0.7);

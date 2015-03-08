@@ -76,9 +76,7 @@ function do_make_jpeg_plz(txt)
 	return txt;
 }
 
-console.log(do_make_jpeg_plz("Lost Luggage is an action video game developed and released in 1982 for the Atari 2600 by Texas-based studio Games by Apollo. The player controls skycaps working at an airport and tries to collect pieces of luggage that fall overhead from a frantic luggage carousel. A two-player mode, in which the second player controls the direction the luggage falls, is also available. Programmer Ed Salvo was inspired to make Lost Luggage when he was waiting for his luggage at the Dallas/Fort Worth International Airport, and the game took around four weeks to make. A four-minute advertising jingle was recorded for the game but never used. Reviewers criticized the game's similarity to the Activision game Kaboom!, believing Lost Luggage to be an inferior clone. Soon after Lost Luggage '​s release, Apollo filed for bankruptcy and closed."));
-
-// if (process.argv.length > 2)
-// 	txt = process.argv[2];
-// 	jpeg_txt = do_make_jpeg_plz(txt);
-// 	console.log(jpeg_txt);
+if (process.argv.length > 2)
+	txt = process.argv[2];
+	jpeg_txt = do_make_jpeg_plz(txt);
+	console.log(jpeg_txt);

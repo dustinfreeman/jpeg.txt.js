@@ -37,16 +37,19 @@ function do_make_jpeg_plz(txt)
 	
     txt = replace_with_prob(txt, "ing ", "in' ", 0.7);
 
+    txt = replace_with_prob(txt, "one", "1", 0.9);
+    txt = replace_with_prob(txt, "two", "2", 0.9);
+    txt = replace_with_prob(txt, "three", "3", 0.9);
+    txt = replace_with_prob(txt, "four", "4", 0.9);
+    txt = replace_with_prob(txt, "five", "5", 0.9);
+    txt = replace_with_prob(txt, "six", "6", 0.9);
+    txt = replace_with_prob(txt, "seven", "7", 0.9);
+    txt = replace_with_prob(txt, "eight", "8", 0.9);
+    txt = replace_with_prob(txt, "nine", "9", 0.9);
+    txt = replace_with_prob(txt, "ten", "10", 0.9);
     txt = replace_with_prob(txt, "first", "1st", 0.9);
     txt = replace_with_prob(txt, "second", "2nd", 0.9);
     txt = replace_with_prob(txt, "third", "3rd", 0.9);
-    txt = replace_with_prob(txt, "fourth", "4th", 0.9);
-    txt = replace_with_prob(txt, "fifth", "5th", 0.9);
-    txt = replace_with_prob(txt, "sixth", "6th", 0.9);
-    txt = replace_with_prob(txt, "seventh", "7th", 0.9);
-    txt = replace_with_prob(txt, "eight", "8th", 0.9);
-    txt = replace_with_prob(txt, "ninth", "9th", 0.9);
-    txt = replace_with_prob(txt, "tenth", "10th", 0.9);
 
 	txt = replace_with_prob(txt, "er", "r", 0.3);
 	txt = replace_with_prob(txt, "er", "a", 0.3);
